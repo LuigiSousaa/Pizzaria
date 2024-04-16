@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Produtos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iterar sobre a lista de produtos recebida -->
+                <tr th:each="produto : ${produtos}">
+                    <td th:text="${produto.id}">ID</td>
+                    <td th:text="${produto.nome}">Nome</td>
+                    <td th:text="${produto.preco}">Preço</td>
+                    <td>
+                        <a th:href="@{'/editar/' + ${produto.id}}" class="btn">Editar</a>
+                        <a th:href="@{'/excluir/' + ${produto.id}}" class="btn">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" class="btn">Adicionar Produto</a>
+    </div>
+</body>
+</html>

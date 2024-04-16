@@ -2,6 +2,8 @@ package com.pizzaria.app.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class IndexController {
@@ -16,8 +18,14 @@ public class IndexController {
         return "login/login-funcionario";
     }
 
-    @GetMapping("/cadastro-func")
+    @GetMapping("/cadastro-funcionario")
     public String paginaCadastroFuncionario() {
         return "cadastro/cadastro-funcionario";
     }
+
+    @GetMapping("/interna-funcionario")
+    public String paginaInternaFuncinario() {
+        return "interna/interna-funcionario";
+    }
+    
 }
