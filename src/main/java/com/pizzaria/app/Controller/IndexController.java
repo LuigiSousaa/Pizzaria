@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
+
 @Controller
 public class IndexController {
 
@@ -27,5 +28,11 @@ public class IndexController {
     public String paginaInternaFuncinario() {
         return "interna/interna-funcionario";
     }
+
+    @GetMapping("/cadastro-produto")
+    public String paginaCadastrarProduto() {
+        return "interna/cadastrar-produto";
+    }
+    
     
 }

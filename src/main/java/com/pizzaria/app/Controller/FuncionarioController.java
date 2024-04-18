@@ -34,7 +34,7 @@ public class FuncionarioController {
         return "cadastro/cadastro-funcionario";
     }
 
-     @PostMapping("acesso-interna")
+    @PostMapping("acesso-interna")
     public String acessoPagInternaFuncionario(@RequestParam String cpf, @RequestParam String senha) {
         boolean verificaCpf = fr.existsById(cpf);
         boolean verificaSenha = fr.findByCpf(cpf).getSenha().equals(senha);

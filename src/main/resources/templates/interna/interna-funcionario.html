@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org/">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dom Luigi - Cadastro Funcionario</title>
+    <link rel="stylesheet" th:href="@{css/style-interna.css}">
+
 </head>
 <body>
     <div class="container">
@@ -18,7 +21,6 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Iterar sobre a lista de produtos recebida -->
                 <tr th:each="produto : ${produtos}">
                     <td th:text="${produto.id}">ID</td>
                     <td th:text="${produto.nome}">Nome</td>
@@ -30,7 +32,9 @@
                 </tr>
             </tbody>
         </table>
-        <a href="#" class="btn">Adicionar Produto</a>
+        
+        <!-- Formulário de cadastro de produto -->
+        <a href="cadastro-produto" class="btn">Adicionar Produto</a>
     </div>
 </body>
 </html>

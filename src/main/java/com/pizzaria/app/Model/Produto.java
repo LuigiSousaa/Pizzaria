@@ -11,7 +11,7 @@ import lombok.*;
 public class Produto implements Serializable{
     
     @Id
-    private String id;
+    private Integer id;
     private String nome;
     private String preco;
 }
